@@ -1,0 +1,27 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.7.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'fr.eni.ecole'
+version = '1'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web:2.7.3'
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation
+	implementation 'org.springframework.boot:spring-boot-starter-validation:2.7.3'
+	runtimeOnly 'mysql:mysql-connector-java'
+    implementation 'org.springframework.boot:spring-boot-starter-test:2.7.3'
+	compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper'
+	compile group: 'javax.servlet', name: 'javax.servlet-api'
+	compile group: 'javax.servlet', name: 'jstl'
+
+}
