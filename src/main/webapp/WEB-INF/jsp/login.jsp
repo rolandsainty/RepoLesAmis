@@ -27,19 +27,49 @@
 			<h2>
 				<spring:message code="welcome.title" />
 			</h2>
-			<p>
-				<spring:message code="welcome.part1" />
-			</p>
-			<p>
-				<spring:message code="welcome.part2" />
-			</p>
-			<p>
-				<a class="btn btn-primary btn-lg" role="button" href="aboutUs"><spring:message
-						code="menu.aboutus" /></a>
-			</p>
 
-		</div>
-	</div>
 
-	<jsp:include page="footer.jsp" />
-</html>
+		<form:form action="connexion" method="POST" cssClass="form-horizontal"  name="loginForm" modelAttribute="user">
+
+		<div class="form-group">
+            <form:label path="pseudo" cssClass="col-xs-2 control-label"><spring:message code="inscription.label.login"/></form:label>
+        					<div class="col-xs-10">
+        						<form:input path="pseudo" cssClass="form-control" />
+        						<form:errors path="pseudo" cssClass="erreur"/>
+        					</div>
+        </div>
+        <div class="form-group">
+           <form:label path="motDePasse" cssClass="col-xs-2 control-label"><spring:message code="inscription.label.pwd1" /></form:label>
+                                       <div class="col-xs-10">
+                                        		<form:input path="motDePasse" cssClass="form-control" />
+                                        		<form:errors path="motDePasse" cssClass="erreur"/>
+                                       </div>
+        </div>
+
+
+
+<div class="mx-auto">
+                    <button type="submit"  class="btn btn-primary btn-lg" ><spring:message code="login.bouton.connexion" /></button>
+
+                <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <label class="form-check-label" for="flexCheckDefault"><spring:message code="login.case.remember"/></label>
+                      <a role="button" href="" class="btn btn-link"><spring:message code="login.link.passwordForgotten" /></a>
+                </div>
+
+
+ </div>
+
+
+
+<a type="button"  href="inscription" class="btn btn-primary btn-lg btn-block"><spring:message code="login.bouton.create" /></a>
+
+                </div>
+
+
+        </form:form>
+    </div>
+ </div>
+
+        <jsp:include page="footer.jsp" />
+        </html>

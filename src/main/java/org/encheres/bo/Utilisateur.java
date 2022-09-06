@@ -1,13 +1,8 @@
 package org.encheres.bo;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Pattern;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Utilisateur {
@@ -15,40 +10,49 @@ public class Utilisateur {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int noUtilsateur;
 
-    @NotBlank
+    //@NotBlank
     private String pseudo;
 
-    @NotBlank
+    //@NotBlank
     private String nom;
 
-    @NotBlank
+    //@NotBlank
     private String prenom;
 
-    @NotBlank
-    @Email
+    //@NotBlank
+    //@Email
     private String email;
 
-    @NotBlank
-    @Pattern(regexp="/^(?:(?:\\+|00)33|0)\\s*[1-9](?:[\\s.-]*\\d{2})")
+    //@NotBlank
+    //@Pattern(regexp="/^(?:(?:\\+|00)33|0)\\s*[1-9](?:[\\s.-]*\\d{2})")
     private String telephone;
 
-    @NotBlank
+    //@NotBlank
     private String rue;
 
-    @NotBlank
-    @Pattern(regexp="^[0-9]{5}$")
+    //@NotBlank
+    //@Pattern(regexp="^[0-9]{5}$")
     private String codePostal;
 
-    @NotBlank
+    //@NotBlank
     private String ville;
 
-    @NotBlank
+    //@NotBlank
     private String motDePasse;
 
-    @NotBlank
+    //@NotBlank
     private String credit;
 
     private boolean administrateur;
+
+    @OneToMany
+    private List<Article> articlesVendus;
+
+    @OneToMany
+    private List<Article> articlesAchetes;
+
+    @OneToMany
+    private List<Enchere> encheres;
 
     public Utilisateur() {
 

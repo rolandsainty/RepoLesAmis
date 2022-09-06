@@ -62,6 +62,7 @@
 
 
 
+<a type="button"  href="modifFormulaire" class="btn btn-primary btn-lg btn-block"><spring:message code="afficherProfil.boutton.modifier"/></a>
     </form:form>
 
 
