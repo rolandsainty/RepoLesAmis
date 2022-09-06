@@ -24,9 +24,10 @@
 
 					<li><a href="inscription"><spring:message
 								code="menu.inscription.label" /></a></li>
-					<li><a href="connexion"><spring:message
+					<li><a href="login"><spring:message
 								code="menu.connexion.label" /></a></li>
-
+					<li><a href="fermetureSession"><spring:message
+                                code="menu.deconnexion.label" /></a></li>
 					<li><a href="aboutUs"><spring:message code="menu.aboutus" /></a></li>
 
 					      <li class="nav-item dropdown">

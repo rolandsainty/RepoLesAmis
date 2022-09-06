@@ -18,6 +18,7 @@
 
 </head>
 <body class ="container-fluid">
+    <jsp:include page="menu.jsp"/>
 
 <header class="container">
     <div class="row">

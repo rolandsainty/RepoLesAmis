@@ -24,6 +24,7 @@
 
 
    <jsp:include page="menu.jsp"></jsp:include>
+   <jsp:include page="bandeauUtilisateur.jsp"></jsp:include>
 
 
 <div class="container">

@@ -18,6 +18,7 @@
 
 </head>
 <body class ="container-fluid">
+    <jsp:include page="menu.jsp"/>
 
 <header class="container">
 
@@ -26,16 +27,7 @@
 
     <div class="row">
 
-    <div class="form-group">
-        <form:label path="pseudo" cssClass="col-xs-2 control-label">
-    						<spring:message code="inscription.label.login" />
-    					</form:label>
-    					<div class="col-xs-10">
-    						<form:input path="pseudo" cssClass="form-control" />
-    					</div>
-
-
-    <spring:message code="afficherProfil.label.login"  arguments ="${user.pseudo}"/>
+        <spring:message code="afficherProfil.label.login"  arguments ="${user.pseudo}"/>
     </div>
 <br>
 

@@ -54,7 +54,7 @@
                 <div class="form-check">
                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                       <label class="form-check-label" for="flexCheckDefault"><spring:message code="login.case.remember"/></label>
-                      <a role="button" href="" class="btn btn-link"><spring:message code="login.link.passwordForgotten" /></a>
+                      <a role="button" href="accueilInterne" class="btn btn-link"><spring:message code="login.link.passwordForgotten" /></a>
                 </div>
 
 

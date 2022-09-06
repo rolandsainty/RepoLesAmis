@@ -71,13 +71,6 @@
 
 		</div>
 	</div>
-			<p>
-				<a class="btn btn-primary btn-lg" role="button" href="aboutUs"><spring:message
-						code="menu.aboutus" /></a>
-				<a class="btn btn-primary btn-lg" role="button" href="accueil"><spring:message
-                code="menu.enter" /></a>
-			</p>
-
 
 	<jsp:include page="footer.jsp" />
 </html>
